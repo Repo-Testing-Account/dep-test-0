@@ -11,7 +11,7 @@ pipeline {
                         // Directly replace the placeholder in deployment.yaml
                         
                         // Apply the updated manifest
-                        sh "kubectl apply -f k8s/deployment_updated.yaml"
+                        sh "kubectl apply -f k8s/deployment.yaml"
                         
                         // Rollout restart to ensure the new image is pulled
                         sh "kubectl rollout restart deployment/my-app"
